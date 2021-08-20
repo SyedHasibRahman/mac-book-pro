@@ -23,25 +23,28 @@ function memoryOption(product, option) {
     } else if (option == 'ssd-1tb') {
         extraCharges.innerText = 180;
     }
+    // call calculateTotal(); function 
     calculateTotal();
+    // make button enable after disabled & Change promo text and text color
     document.getElementById('apply-btn').removeAttribute("disabled", true);
-
     document.getElementById('promo-text').innerText = 'Add Promo code';
     document.getElementById('promo-text').style.color = '#333';
 };
+// Memory Section 
 document.getElementById('memory-16gb').addEventListener('click', function () {
     memoryOption('memory', 'memory-16gb');
 });
 document.getElementById('memory-8gb').addEventListener('click', function () {
     memoryOption('memory', 'memory-8gb');
 });
+// delivery Section 
 document.getElementById('free-delivery').addEventListener('click', function () {
-    // deliveryOptions('free-delivery');
     memoryOption('delivery', 'free-delivery');
 });
 document.getElementById('argent-delivery').addEventListener('click', function () {
     memoryOption('delivery', 'argent-delivery');
 });
+// storage Section 
 document.getElementById('ssd-256gb').addEventListener('click', function () {
     memoryOption('storage', 'ssd-256gb');
 });
